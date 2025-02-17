@@ -1,115 +1,9 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  ColorValue,
-} from 'react-native';
-
-export const Circle = ({color = 'lightgray'}: {color?: ColorValue}) => {
-  return (
-    <View
-      style={{
-        width: 90,
-        height: 90,
-        borderRadius: 90,
-        backgroundColor: color,
-      }}
-    />
-  );
-};
-
-export const ChipButton = ({text}: {text: string}) => {
-  return (
-    <TouchableOpacity
-      style={{
-        width: 110,
-        height: 'auto',
-        padding: 5,
-        marginTop: 10,
-        borderRadius: 90,
-        backgroundColor: 'blue',
-        alignItems: 'center',
-      }}>
-      <Text
-        style={{
-          color: 'white',
-          fontSize: 15,
-          fontWeight: 'bold',
-        }}>
-        {text}
-      </Text>
-    </TouchableOpacity>
-  );
-};
-
-const DividerWithText = ({text}: {text: string}) => {
-  return (
-    <View
-      style={{
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginVertical: 50,
-        marginHorizontal: 20,
-      }}>
-      <View
-        style={{
-          flex: 1,
-          height: 1,
-          backgroundColor: 'gray',
-          flexDirection: 'row',
-        }}
-      />
-      <Text
-        style={{
-          marginHorizontal: 15,
-          textAlign: 'center',
-          color: 'gray',
-          fontWeight: 'bold',
-        }}>
-        {text}
-      </Text>
-      <View
-        style={{
-          flex: 1,
-          height: 1,
-          backgroundColor: 'gray',
-        }}
-      />
-    </View>
-  );
-};
-
-export const ElevatedButton = ({text}: {text: string}) => {
-  return (
-    <TouchableOpacity
-      style={{
-        width: 110,
-        height: 120,
-        borderRadius: 10,
-        padding: 5,
-        marginTop: 10,
-        backgroundColor: 'whitesmoke',
-        alignItems: 'center',
-        elevation: 10,
-        shadowColor: 'black',
-        shadowOffset: {width: 0, height: 10},
-        shadowOpacity: 1,
-        shadowRadius: 8,
-      }}>
-      <Circle />
-      <Text
-        style={{
-          color: 'black',
-          fontSize: 15,
-          fontWeight: 'bold',
-        }}>
-        {text}
-      </Text>
-    </TouchableOpacity>
-  );
-};
+import {View, Text, StyleSheet} from 'react-native';
+import {DividerWithText} from '../../components/ui/Divider/DividerWithText';
+import {ElevatedButton} from '../../components/ui/ElevatedButton/ElevatedButton';
+import {ChipButton} from '../../components/ui/ChipButton/ChipButton';
+import {Circle} from '../../components/ui/Circle/Circle';
 
 export const HomeScreen = () => {
   return (
@@ -158,7 +52,7 @@ const styles = StyleSheet.create({
   card: {
     width: '90%',
     height: 150,
-    backgroundColor: '',
+    backgroundColor: 'lightblue',
     borderRadius: 10,
     elevation: 5,
     shadowColor: 'black',

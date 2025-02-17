@@ -4,7 +4,7 @@ import { HomeScreen } from '../screens/home/HomeScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AboutScreen from '../screens/about/AboutScreen';
 import ContactScreen from '../screens/contact/ContactScreen';
-import { HomeIcon, IDIcon, PersonIcon } from '../icons/Icons';
+import { HomeIcon, IDIcon, ChurchIcon } from '../icons/Icons';
 
 export const Navigator = () => {
 
@@ -26,7 +26,7 @@ export const Navigator = () => {
             <Tabs.Screen name="US" component={AboutScreen} options={{
               title: 'Nosotros',
               tabBarIcon: ({focused}) => (
-                <PersonIcon color={ focused ? 'blue' : 'gray' }/>
+                <ChurchIcon color={ focused ? 'blue' : 'gray' }/>
               ),
             }}/>
             <Tabs.Screen name="CONTACT" component={ContactScreen} options={{
