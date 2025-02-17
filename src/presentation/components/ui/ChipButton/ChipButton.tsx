@@ -16,7 +16,7 @@ export const ChipButton = ({
         padding: 5,
         marginTop: 10,
         borderRadius: 90,
-        backgroundColor: 'blue',
+        backgroundColor: 'dodgerblue',
         alignItems: 'center',
       }}>
       <Text

@@ -1,13 +1,13 @@
-import { ColorValue, View } from "react-native";
+import {Image} from 'react-native';
 
-export const Circle = ({color = 'lightgray'}: {color?: ColorValue}) => {
+export const Circle = () => {
   return (
-    <View
+    <Image
+      source={require('../../../assets/images/mini_logo.png')}
       style={{
         width: 90,
         height: 90,
         borderRadius: 90,
-        backgroundColor: color,
       }}
     />
   );

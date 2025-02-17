@@ -4,12 +4,21 @@ import {DividerWithText} from '../../components/ui/Divider/DividerWithText';
 import {ElevatedButton} from '../../components/ui/ElevatedButton/ElevatedButton';
 import {ChipButton} from '../../components/ui/ChipButton/ChipButton';
 import {Circle} from '../../components/ui/Circle/Circle';
+import {Image} from 'react-native';
+import { Logo } from '../../components/ui/Logo/Logo';
 
 export const HomeScreen = () => {
+  const urls = {
+    virgen: require('../../assets/images/virgen.jpg'),
+    oraciones:
+      'https://png.pngtree.com/png-clipart/20190520/original/pngtree-hand-painted-cartoon-prayer-hand-elements-png-image_4118593.jpg',
+    evangelio:
+      'https://media.istockphoto.com/id/901429470/es/vector/biblia-dise%C3%B1o-plano.jpg?s=612x612&w=0&k=20&c=CqfH6bkpnetNWuo7pgR8Ta29blDJCAQIo2va5-khLqU=',
+  }
   return (
     <View style={styles.container}>
-      <View style={styles.img}></View>
-      <Text style={styles.title}>Corrientes Católica.org</Text>
+      <Image source={urls.virgen} style={styles.img} />
+      <Logo />
       <View style={styles.card}>
         <Circle />
         <View style={styles.cardContent}>
@@ -23,10 +32,16 @@ export const HomeScreen = () => {
       </View>
 
       <View style={styles.actions}>
-        <ElevatedButton text={'Oraciones'} />
-        <ElevatedButton text={'Evangelio'} />
+        <ElevatedButton text={'Oraciones'} uriSrc={urls.oraciones} />
+        <ElevatedButton text={'Evangelio'} uriSrc={urls.evangelio} />
       </View>
-      <DividerWithText text={'VISITA NUESTRAS REDES SOCIALES'} />
+      <DividerWithText
+        text={'VISITA NUESTRAS REDES SOCIALES'}
+        styles={{
+          position: 'absolute',
+          bottom: 50,
+        }}
+      />
     </View>
   );
 };
@@ -38,7 +53,7 @@ const styles = StyleSheet.create({
   },
   img: {
     width: '100%',
-    height: 180,
+    height: 200,
     backgroundColor: 'gray',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
@@ -83,5 +98,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '100%',
+  },
+  logo: {
+    width: 300,
+    height: 60,
+    marginVertical: 20,
   },
 });
