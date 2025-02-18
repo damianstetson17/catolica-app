@@ -2,6 +2,7 @@ This is a new [**React Native**](https://reactnative.dev) project for [**Corrien
 
 <p align="center">
  <img src="https://github.com/damianstetson17/catolica-app/blob/main/demo/home.png" style="height: 500px;"/>
+  <img src="https://github.com/damianstetson17/catolica-app/blob/main/demo/about.png" style="height: 500px; margin-left: 24px;"/>
 </p>
 
 # Getting Started
