@@ -1,7 +1,7 @@
 This is a new [**React Native**](https://reactnative.dev) project for [**Corrientes Católica**](https://corrientescatolica.org/)
 
 <p align="center">
- <img src="https://github.com/damianstetson17/catolica-app/blob/main/demo/home.png"/>
+ <img src="https://github.com/damianstetson17/catolica-app/blob/main/demo/home.png" style="height: 500px;"/>
 </p>
 
 # Getting Started
