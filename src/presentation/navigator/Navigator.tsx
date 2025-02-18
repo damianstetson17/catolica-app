@@ -8,6 +8,7 @@ import {HomeIcon, IDIcon, ChurchIcon} from '../icons/Icons';
 import GospelScreen from '../screens/gospel/GospelScreen';
 import {createStackNavigator} from '@react-navigation/stack';
 import {RootTabParamList, StackParamList} from './types';
+import PrayersScreen from '../screens/prayers/PrayersScreen';
 
 export const Navigator = () => {
   const Tabs = createBottomTabNavigator<RootTabParamList>();
@@ -17,6 +18,7 @@ export const Navigator = () => {
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="USPage" component={AboutScreen} />
       <Stack.Screen name="GOSPEL" component={GospelScreen} />
+      <Stack.Screen name="PRAYERS" component={PrayersScreen} />
     </Stack.Navigator>
   );
 

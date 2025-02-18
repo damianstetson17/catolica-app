@@ -21,6 +21,7 @@ export const HomeScreen = () => {
   };
 
   const goGospel = () => navigation.navigate('US', {screen: 'GOSPEL'});
+  const goPrayers = () => navigation.navigate('US', {screen: 'PRAYERS'});
   const goToWeb = async () =>
     await Linking.openURL('https://corrientescatolica.org/');
 
@@ -44,7 +45,7 @@ export const HomeScreen = () => {
         <ElevatedButton
           text={'Oraciones'}
           uriSrc={urls.oraciones}
-          onPress={goToWeb}
+          onPress={goPrayers}
         />
         <ElevatedButton
           text={'Evangelio'}

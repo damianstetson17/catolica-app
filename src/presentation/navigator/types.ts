@@ -5,6 +5,7 @@ import { NavigatorScreenParams } from '@react-navigation/native';
 export type StackParamList = {
   USPage: undefined;
   GOSPEL: undefined;
+  PRAYERS: undefined;
 };
 
 //Bottom Tab, indicando que "US" es un Stack anidado
