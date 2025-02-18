@@ -1,4 +1,4 @@
-This is a new [**React Native**](https://reactnative.dev) project for [Corrientes Católica](https://corrientescatolica.org/)
+This is a new [**React Native**](https://reactnative.dev) project for [**Corrientes Católica**](https://corrientescatolica.org/)
 
 # Getting Started
 
@@ -55,7 +55,3 @@ npm run ios
 # OR using Yarn
 yarn ios
 ```
-
-## Congratulations! :tada:
-
-You've successfully run the App. :partying_face:
