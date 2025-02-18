@@ -1,5 +1,9 @@
 This is a new [**React Native**](https://reactnative.dev) project for [**Corrientes Católica**](https://corrientescatolica.org/)
 
+<p align="center">
+ <img src="https://github.com/damianstetson17/catolica-app/blob/main/demo/home.png"/>
+</p>
+
 # Getting Started
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
