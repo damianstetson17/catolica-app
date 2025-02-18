@@ -1,20 +1,29 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Linking} from 'react-native';
 import {DividerWithText} from '../../components/ui/Divider/DividerWithText';
 import {ElevatedButton} from '../../components/ui/ElevatedButton/ElevatedButton';
 import {ChipButton} from '../../components/ui/ChipButton/ChipButton';
 import {Circle} from '../../components/ui/Circle/Circle';
 import {Image} from 'react-native';
-import { Logo } from '../../components/ui/Logo/Logo';
-
+import {Logo} from '../../components/ui/Logo/Logo';
+import SocialMedias from '../../components/SocialMedias/SocialMedias';
+import {useNavigation} from '@react-navigation/native';
+import {RootTabNavigationProp} from '../../navigator/types';
 export const HomeScreen = () => {
+  const navigation = useNavigation<RootTabNavigationProp>();
+
   const urls = {
     virgen: require('../../assets/images/virgen.jpg'),
     oraciones:
       'https://png.pngtree.com/png-clipart/20190520/original/pngtree-hand-painted-cartoon-prayer-hand-elements-png-image_4118593.jpg',
     evangelio:
       'https://media.istockphoto.com/id/901429470/es/vector/biblia-dise%C3%B1o-plano.jpg?s=612x612&w=0&k=20&c=CqfH6bkpnetNWuo7pgR8Ta29blDJCAQIo2va5-khLqU=',
-  }
+  };
+
+  const goGospel = () => navigation.navigate('US', {screen: 'GOSPEL'});
+  const goToWeb = async () =>
+    await Linking.openURL('https://corrientescatolica.org/');
+
   return (
     <View style={styles.container}>
       <Image source={urls.virgen} style={styles.img} />
@@ -27,13 +36,21 @@ export const HomeScreen = () => {
             Navegá u enterate sobre noticias locales, nacionales e
             internacional.
           </Text>
-          <ChipButton text={'Ver Sitio >'} />
+          <ChipButton text={'Ver Sitio >'} onPress={goToWeb} />
         </View>
       </View>
 
       <View style={styles.actions}>
-        <ElevatedButton text={'Oraciones'} uriSrc={urls.oraciones} />
-        <ElevatedButton text={'Evangelio'} uriSrc={urls.evangelio} />
+        <ElevatedButton
+          text={'Oraciones'}
+          uriSrc={urls.oraciones}
+          onPress={goToWeb}
+        />
+        <ElevatedButton
+          text={'Evangelio'}
+          uriSrc={urls.evangelio}
+          onPress={goGospel}
+        />
       </View>
       <DividerWithText
         text={'VISITA NUESTRAS REDES SOCIALES'}
@@ -42,6 +59,7 @@ export const HomeScreen = () => {
           bottom: 50,
         }}
       />
+      <SocialMedias />
     </View>
   );
 };

@@ -12,8 +12,8 @@ const ContactScreen = () => {
       title: 'Ubicación',
       description: 'Corrientes - Argentina',
     },
-    {icon: 'email', title: 'Correo', description: 'description'},
-    {icon: 'phone', title: 'Teléfono', description: '+54 9 123123 123123'},
+    {icon: 'email', title: 'Correo', description: 'catolica@gmail.com'},
+    {icon: 'phone', title: 'Teléfono', description: '+54 9 3764 347698'},
   ];
 
   return (
